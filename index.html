@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <style>
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, #B372CF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .user-friendly {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(55, 24, 102, 1));
+        }
+
+        .app-mobile {
+            box-shadow: 0px -20px 80px 0px hsl(263, 100%, 64%, 0.4), 
+                        20px -20px 40px 0px hsl(263, 100%, 64%, 0.2), 
+                        -20px -20px 40px 0px hsl(263, 100%, 64%, 0.2);
+        }
+
+        .features{
+            background: linear-gradient(to right , rgba(25,13,46,1) , rgba(2,1,3,1) );
+        }
+
+ .toggle-switch {
+    width: 33px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-switch.active {
+    background-color: #8C45FF;
+}
+
+.toggle-circle {
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    transition: left 0.3s;
+}
+
+.toggle-switch.active .toggle-circle {
+    left: 16px;
+}
+
+.pro{
+   background: linear-gradient(to bottom, rgba(1, 0, 2, 1), rgba(54, 23, 100, 0.7));
+
+}
+
+.cta{
+    background: linear-gradient(to bottom, rgba(54, 23, 100, 0.55) , rgba(1, 0, 2, 1));
+
+}
+
+@media screen and (min-width : 768px) {
+    .app-mobile {
+            box-shadow: -70px -200px 80px 80px hsl(263, 100%, 64%, 0.2), 
+                        20px -100px 40px 0px hsl(263, 100%, 64%, 0.2), 
+                        -20px -100px 40px 0px hsl(263, 100%, 64%, 0.2);
+        }
+}
+
+    </style>
+</head>
+<body class="box-border font-inter min-h-screen p-0 m-0 bg-black">
+    <header class="flex text-[13px] border-b-zinc-900 border-b-2 items-center justify-between p-3 text-white md:justify-around">
+        <img src="./images/Logo.svg" alt="Logo">
+        <div class="flex space-x-4 md:hidden">
+            <div class="p-1 border-gray-700 border-[1px] rounded-md">
+                <button class="shadow-inner-white bg-header-button px-3 rounded-md pt-[3px] pb-[2px] flex text-[13px] items-center justify-center">Join waitlist</button>
+            </div>
+            <img src="./images/Vector.svg" alt="menu">
+        </div>
+        <nav class="hidden md:flex px-8 py-2 space-x-5 border-gray-700 border-[1px] rounded-full">
+            <a href="#" class="opacity-45">Features</a>
+            <a href="#" class="opacity-45">Developers</a>
+            <a href="#" class="opacity-45">Company</a>
+            <a href="#" class="opacity-45">Blog</a>
+            <a href="#" class="opacity-45">Changelog</a>
+        </nav>
+        <button class="hidden md:flex shadow-inner-white bg-header-button px-3 rounded-md pt-[5px] pb-[5px] text-[13px] items-center justify-center">Join waitlist</button>
+
+    </header>
+
+    <!-- Hero section -->
+    <section class="companies pt-20 relative flex flex-col items-center gap-4 px-3 md:px-14">
+        <div class="flex p-2 border-zinc-900 text-[13px] border-2 rounded-3xl space-x-2 items-center">
+            <div class="bg-proBotton p-[2px] px-[3px] text-[9px] font-bold rounded-3xl">
+                NEW
+            </div>
+            <p class="text-proBotton opacity-70">Latest integration just arrived</p>
+        </div>
+
+        <h1 class="text-[48px] text-gradient leading-[52px] text-center md:text-[80px] md:font-bold md:leading-[80px] lg:px-56">Boost your rankings with AI.</h1>
+        <p class="text-white text-base text-center px-3 md:px-28 lg:px-56 lg:mx-56">Elevate your site’s visibility effortlessly with AI, where smart technology meets user-friendly SEO tools.</p>
+        
+        <button class="bg-white p-2 px-3 text-[15px] font-bold rounded-lg z-50 md:mt-4">Start for free</button>
+        <div class="border-gray-700 border-[1px] rounded-[50%] w-[309px] h-[309px] opacity-45 translate-y-[230px] absolute -z-20"></div>
+
+        <div class="relative w-full md:h-[700px] h-[300px] mt-8 flex justify-center items-center">
+            <img src="./images/App Wide@2x 1.svg" alt="App" class="absolute object-cover z-10 app-mobile">
+            <div class="absolute inset-0 md:inset-22 bg-gradient-to-b from-black/0 to-black/100 z-20"></div>
+        </div>
+    </section>
+
+    <!-- Companies section mobile -->
+    <section class="flex flex-col px-4 items-center md:hidden">
+        <p class="text-white opacity-70 text-center mt-10">Trusted by the world’s most innovative teams</p>
+        <div class="mt-6 gap-2 flex flex-col">
+            <div class="flex gap-2">
+                <div class="border-gray-800 border-[1px] py-8 px-[10px] rounded-lg flex justify-center items-center">
+                    <img src="./images/acme 1.png" class="w-[155px] h-auto" alt="acme">
+                </div>
+                <div class="border-gray-800 border-[1px] py-8 px-[10px] rounded-lg flex justify-center items-center">
+                    <img src="./images/outside.svg" class="w-[155px] h-auto" alt="acme">
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <div class="border-gray-800 border-[1px] py-8 px-[10px] rounded-lg flex justify-center items-center">
+                    <img src="./images/echo-vw 1.svg" class="w-[155px] h-auto"  alt="acme">
+                </div>
+                <div class="border-gray-800 border-[1px] py-8 px-[10px] rounded-lg flex justify-center items-center">
+                    <img src="./images/apexw 1.svg" class="w-[155px] h-auto" alt="acme">
+                </div>
+            </div>
+           
+           <div class="flex gap-2">
+            <div class="border-gray-800 border-[1px] py-8 px-[10px] rounded-lg flex justify-center items-center">
+                <img src="./images/quantrumw 1.png" class="w-[155px] h-auto" alt="acme">
+            </div>
+            <div class="border-gray-800 border-[1px] py-8 px-[10px] rounded-lg flex justify-center items-center">
+                <img src="./images/celestial 1.svg" class="w-[155px] h-auto" alt="acme">
+            </div>
+           </div>
+
+           <div class="flex gap-2">
+            <div class="border-gray-800 border-[1px] py-8 px-[10px] rounded-lg flex justify-center items-center">
+                <img src="./images/pulsew 1.svg" class="w-[155px] h-auto" alt="acme">
+            </div>
+            <div class="border-gray-800 border-[1px] py-8 px-[10px] rounded-lg flex justify-center items-center">
+                <img src="./images/twice.svg" class="w-[155px] h-auto" alt="acme">
+            </div>
+           </div>
+        </div>
+    </section>
+
+    <!-- Companies section tablet and desktop -->
+    <section class="hidden md:flex flex-col px-4 items-center">
+        <p class="text-white opacity-70 text-center mt-10">Trusted by the world’s most innovative teams</p>
+        <div class="mt-10 gap-2 flex flex-col">
+            <div class="flex gap-2">
+                <div class="border-gray-800 border-[1px] py-8 px-[40px] rounded-lg flex justify-center items-center">
+                    <img src="./images/acme 1.png" class="w-[155px] h-auto" alt="acme">
+                </div>
+                <div class="border-gray-800 border-[1px] py-8 px-[40px] rounded-lg flex justify-center items-center">
+                    <img src="./images/outside.svg" class="w-[155px] h-auto" alt="acme">
+                </div>
+
+                <div class="border-gray-800 border-[1px] py-8 px-[40px] rounded-lg flex justify-center items-center">
+                    <img src="./images/echo-vw 1.svg" class="w-[155px] h-auto"  alt="acme">
+                </div>
+                <div class="border-gray-800 border-[1px] py-8 px-[40px] rounded-lg flex justify-center items-center">
+                    <img src="./images/apexw 1.svg" class="w-[155px] h-auto" alt="acme">
+                </div>
+
+            </div>
+
+           
+           <div class="flex gap-2">
+            <div class="border-gray-800 border-[1px] py-8 px-[40px] rounded-lg flex justify-center items-center">
+                <img src="./images/quantrumw 1.png" class="w-[155px] h-auto" alt="acme">
+            </div>
+            <div class="border-gray-800 border-[1px] py-8 px-[40px] rounded-lg flex justify-center items-center">
+                <img src="./images/celestial 1.svg" class="w-[155px] h-auto" alt="acme">
+            </div>
+            <div class="border-gray-800 border-[1px] py-8 px-[40px] rounded-lg flex justify-center items-center">
+                <img src="./images/pulsew 1.svg" class="w-[155px] h-auto" alt="acme">
+            </div>
+            <div class="border-gray-800 border-[1px] py-8 px-[40px] rounded-lg flex justify-center items-center">
+                <img src="./images/twice.svg" class="w-[155px] h-auto" alt="acme">
+            </div>
+           </div>
+
+        </div>
+    </section>
+
+    <!-- Bento1 section -->
+    <p class="hidden mt-14  md:block px-4 text-center text-white text-xl leading-relaxed md:px-52">Harness the power of AI, making search engine optimization intuitive and effective for all skill levels.</p>
+    <section class="mb-14 pt-20 px-3 flex flex-col items-center gap-10 overflow-hidden md:flex-row md:gap-4">
+
+    
+
+        <div class="border-gray-800 border-[1px] p-7 md:pt-24 flex items-center flex-col rounded-lg h-[415px] relative lg:h-[615px] md:w-[564px]">
+            <img src="./images/bague.svg" alt="anneau" class="lg:scale-150">
+            <div class="mt-5 flex flex-col text-white gap-2 md:absolute bottom-5 ml-4 ">
+                <h1 class="text-sm lg:text-xl">SEO goal setting</h1>
+                <p class="opacity-45 text-sm lg:text-xl">Helps you set and achieve SEO goals with guided assistance.</p>
+            </div>
+        </div>
+
+
+        <div class="relative w-full h-64 md:h-[400px] mt-4 overflow-hidden lg:h-[600px]">
+            <img src="./images/App Wide@2x 1.svg" alt="App" class="absolute inset-0 object-cover z-10 translate-x-32 translate-y-16 scale-125">
+            <div class="absolute inset-0 user-friendly z-20 rounded-lg"></div>
+
+            <div class="flex flex-col gap-2 text-white absolute bottom-4 left-4 z-50 md:ml-5 md:mb-4">
+                <h1 class="text-sm lg:text-xl">User-friendly dashboard</h1>
+                <p class="opacity-45 pr-8 lg:text-xl">Perform complex SEO audits and optimizations with a single click.</p>
+            </div>
+        </div>
+
+
+        
+
+    </section>
+
+
+
+    <!--Bento2-->
+    <section class="mb-14 pt-20 px-3 flex flex-col items-center gap-10 overflow-hidden md:flex-row md:gap-4">
+
+        <div class="relative w-full h-64 md:h-[400px] mt-4 overflow-hidden lg:h-[600px]">
+            <img src="./images/visualreports.svg" alt="App" class="absolute inset-0 object-cover z-10 translate-x-32 translate-y-16 scale-125 md:hidden">
+            <img src="./images/bento2Desktop.svg" alt="App" class="absolute inset-0 object-cover z-10 translate-x-32 translate-y-16 scale-125 hidden md:block">
+
+            <div class="absolute inset-0 user-friendly z-20 rounded-lg"></div>
+
+            <div class="flex flex-col gap-2 text-white absolute bottom-4 left-4 z-50 md:ml-5 md:mb-4">
+                <h1 class="text-sm lg:text-xl">Visual reports</h1>
+                <p class="opacity-45 pr-8 lg:text-xl">Visual insights into your site’s performance.</p>
+            </div>
+        </div>
+
+
+        <div class="border-gray-800 border-[1px] p-7 md:pt-24 flex items-center flex-col rounded-lg h-[415px] relative lg:h-[615px] md:w-[564px]">
+            <img src="./images/cone.svg" alt="anneau" class="lg:scale-150">
+            <div class="mt-5 flex flex-col text-white gap-2 md:absolute bottom-5 md:px-4">
+                <h1 class="text-sm lg:text-xl">Visual reports</h1>
+                <p class="opacity-45 text-sm lg:text-xl">Automatic suggestions and the best keywords to target.</p>
+            </div>
+        </div>
+
+        
+
+    </section>
+
+    <!--Features mobile-->
+    <section class="features md:hidden py-16 px-9 flex flex-col gap-12 text-white">
+
+        <h1 class="text-[26px] mb-11">Elevate your SEO efforts</h1>
+
+        <div class="flex flex-col gap-3 text-base">
+            <div class="flex space-x-2">
+                <img src="./images/dashboard.svg" alt="dashboard">
+                <h1>User-friendly dashboard</h1>
+            </div>
+            <p class="opacity-45">Perform complex SEO audits and optimizations with a single click.</p>
+        </div>
+
+        <div class="flex flex-col gap-3 text-base">
+            <div class="flex space-x-2">
+                <img src="./images/evaluation.svg" alt="dashboard">
+                <h1>Content evaluation</h1>
+            </div>
+            <p class="opacity-45">Simple corrections for immediate improvemens.</p>
+        </div>
+
+        <div class="flex flex-col gap-3 text-base">
+            <div class="flex space-x-2">
+                <img src="./images/wizard.svg" alt="dashboard">
+                <h1>Link Optimization Wizard</h1>
+            </div>
+            <p class="opacity-45">Perform complex SEO audits and optimizations with a single click.</p>
+        </div>
+
+        <div class="flex flex-col gap-3 text-base">
+            <div class="flex space-x-2">
+                <img src="./images/visual.svg" alt="dashboard">
+                <h1>Visual reports</h1>
+            </div>
+            <p class="opacity-45">Visual insights into your site’s performance.</p>
+        </div>
+
+        <div class="flex flex-col gap-3 text-base">
+            <div class="flex space-x-2">
+                <img src="./images/goal.svg" alt="dashboard">
+                <h1>SEO goal setting</h1>
+            </div>
+            <p class="opacity-45">Helps you set and achieve SEO goals with guided assistance.</p>
+        </div>
+
+        <div class="flex flex-col gap-3 text-base">
+            <div class="flex space-x-2">
+                <img src="./images/optim.svg" alt="dashboard">
+                <h1>One-click optimization</h1>
+            </div>
+            <p class="opacity-45">Perform complex SEO audits and optimizations with a single click.</p>
+        </div>
+
+        <div class="flex flex-col gap-3 text-base">
+            <div class="flex space-x-2">
+                <img src="./images/smart.svg" alt="dashboard">
+                <h1>Smart Keyword Generator</h1>
+            </div>
+            <p class="opacity-45">Automatic suggestions and the best keywords to target.</p>
+        </div>
+
+        <div class="flex flex-col gap-3 text-base">
+            <div class="flex space-x-2">
+                <img src="./images/automated.svg" alt="dashboard">
+                <h1>Automated alerts</h1>
+            </div>
+            <p class="opacity-45">Automatic notifications about your SEO health, including quick fixes.</p>
+        </div>
+
+        <div class="flex flex-col gap-3 text-base">
+            <div class="flex space-x-2">
+                <img src="./images/competitor.svg" alt="dashboard">
+                <h1>Competitor reports</h1>
+            </div>
+            <p class="opacity-45">Provides insights into competitors’ keyword strategies and ranking.</p>
+        </div>
+
+    </section>
+
+     <!--Features tablet-->
+     <section class="features hidden md:flex lg:hidden py-16 px-9 flex-col gap-12 text-white">
+
+        <h1 class="text-5xl mb-11 pr-[400px] leading-[50px]">Elevate your SEO efforts</h1>
+
+        <div class="flex gap-9">
+            <div class="flex flex-col gap-8">
+                <div class="flex flex-col gap-3 text-base">
+                    <div class="flex space-x-2">
+                        <img src="./images/dashboard.svg" alt="dashboard">
+                        <h1>User-friendly dashboard</h1>
+                    </div>
+                    <p class="opacity-45">Perform complex SEO audits and optimizations with a single click.</p>
+                </div>
+        
+                <div class="flex flex-col gap-3 text-base">
+                    <div class="flex space-x-2">
+                        <img src="./images/evaluation.svg" alt="dashboard">
+                        <h1>Content evaluation</h1>
+                    </div>
+                    <p class="opacity-45">Simple corrections for immediate improvemens.</p>
+                </div>
+    
+                
+            <div class="flex flex-col gap-3 text-base">
+                <div class="flex space-x-2">
+                    <img src="./images/wizard.svg" alt="dashboard">
+                    <h1>Link Optimization Wizard</h1>
+                </div>
+                <p class="opacity-45">Perform complex SEO audits and optimizations with a single click.</p>
+            </div>
+    
+            <div class="flex flex-col gap-3 text-base">
+                <div class="flex space-x-2">
+                    <img src="./images/visual.svg" alt="dashboard">
+                    <h1>Visual reports</h1>
+                </div>
+                <p class="opacity-45">Visual insights into your site’s performance.</p>
+            </div>
+    
+            <div class="flex flex-col gap-3 text-base">
+                <div class="flex space-x-2">
+                    <img src="./images/goal.svg" alt="dashboard">
+                    <h1>SEO goal setting</h1>
+                </div>
+                <p class="opacity-45">Helps you set and achieve SEO goals with guided assistance.</p>
+            </div>
+    
+    
+            </div>
+           
+    
+    
+            <div class="flex flex-col gap-8">
+                <div class="flex flex-col gap-3 text-base">
+                    <div class="flex space-x-2">
+                        <img src="./images/optim.svg" alt="dashboard">
+                        <h1>One-click optimization</h1>
+                    </div>
+                    <p class="opacity-45">Perform complex SEO audits and optimizations with a single click.</p>
+                </div>
+        
+                <div class="flex flex-col gap-3 text-base">
+                    <div class="flex space-x-2">
+                        <img src="./images/smart.svg" alt="dashboard">
+                        <h1>Smart Keyword Generator</h1>
+                    </div>
+                    <p class="opacity-45">Automatic suggestions and the best keywords to target.</p>
+                </div>
+        
+                <div class="flex flex-col gap-3 text-base">
+                    <div class="flex space-x-2">
+                        <img src="./images/automated.svg" alt="dashboard">
+                        <h1>Automated alerts</h1>
+                    </div>
+                    <p class="opacity-45">Automatic notifications about your SEO health, including quick fixes.</p>
+                </div>
+        
+                <div class="flex flex-col gap-3 text-base">
+                    <div class="flex space-x-2">
+                        <img src="./images/competitor.svg" alt="dashboard">
+                        <h1>Competitor reports</h1>
+                    </div>
+                    <p class="opacity-45">Provides insights into competitors’ keyword strategies and ranking.</p>
+                </div>
+        
+            </div>
+        </div>
+       
+    </section>
+
+
+    <!--Features desktop-->
+    <section class="features hidden lg:flex py-16 px-9 flex-col gap-12 text-white">
+
+        <h1 class="text-5xl mb-11 pr-[400px] leading-[50px]">Elevate your SEO efforts</h1>
+
+        <div class="flex gap-9">
+            <div class="flex flex-col gap-8">
+                <div class="flex flex-col gap-3 text-base">
+                    <div class="flex space-x-2">
+                        <img src="./images/dashboard.svg" alt="dashboard">
+                        <h1>User-friendly dashboard</h1>
+                    </div>
+                    <p class="opacity-45">Perform complex SEO audits and optimizations with a single click.</p>
+                </div>
+        
+                <div class="flex flex-col gap-3 text-base">
+                    <div class="flex space-x-2">
+                        <img src="./images/evaluation.svg" alt="dashboard">
+                        <h1>Content evaluation</h1>
+                    </div>
+                    <p class="opacity-45">Simple corrections for immediate improvemens.</p>
+                </div>
+    
+                
+            <div class="flex flex-col gap-3 text-base">
+                <div class="flex space-x-2">
+                    <img src="./images/wizard.svg" alt="dashboard">
+                    <h1>Link Optimization Wizard</h1>
+                </div>
+                <p class="opacity-45">Perform complex SEO audits and optimizations with a single click.</p>
+            </div>
+    
+    
+    
+            </div>
+
+
+            <div class="flex flex-col gap-8">
+                <div class="flex flex-col gap-3 text-base">
+                    <div class="flex space-x-2">
+                        <img src="./images/visual.svg" alt="dashboard">
+                        <h1>Visual reports</h1>
+                    </div>
+                    <p class="opacity-45">Visual insights into your site’s performance.</p>
+                </div>
+        
+                <div class="flex flex-col gap-3 text-base">
+                    <div class="flex space-x-2">
+                        <img src="./images/goal.svg" alt="dashboard">
+                        <h1>SEO goal setting</h1>
+                    </div>
+                    <p class="opacity-45">Helps you set and achieve SEO goals with guided assistance.</p>
+                </div>
+
+                <div class="flex flex-col gap-3 text-base">
+                    <div class="flex space-x-2">
+                        <img src="./images/optim.svg" alt="dashboard">
+                        <h1>One-click optimization</h1>
+                    </div>
+                    <p class="opacity-45">Perform complex SEO audits and optimizations with a single click.</p>
+                </div>
+            </div>
+           
+    
+    
+            <div class="flex flex-col gap-8">
+                
+        
+                <div class="flex flex-col gap-3 text-base">
+                    <div class="flex space-x-2">
+                        <img src="./images/smart.svg" alt="dashboard">
+                        <h1>Smart Keyword Generator</h1>
+                    </div>
+                    <p class="opacity-45">Automatic suggestions and the best keywords to target.</p>
+                </div>
+        
+                <div class="flex flex-col gap-3 text-base">
+                    <div class="flex space-x-2">
+                        <img src="./images/automated.svg" alt="dashboard">
+                        <h1>Automated alerts</h1>
+                    </div>
+                    <p class="opacity-45">Automatic notifications about your SEO health, including quick fixes.</p>
+                </div>
+        
+                <div class="flex flex-col gap-3 text-base">
+                    <div class="flex space-x-2">
+                        <img src="./images/competitor.svg" alt="dashboard">
+                        <h1>Competitor reports</h1>
+                    </div>
+                    <p class="opacity-45">Provides insights into competitors’ keyword strategies and ranking.</p>
+                </div>
+        
+            </div>
+        </div>
+       
+    </section>
+
+
+
+
+    <!--Clients mobile-->
+    <section class="md:hidden flex flex-col items-center gap-3 text-white py-9 px-9">
+
+        <h1 class="text-2xl md:text-4xl">Our clients</h1>
+        <p class="text-base text-center opacity-45 md:px-44 md:opacity-80">Hear firsthand how our solutions have boosted online success for users like you.</p>
+        <div class="w-[317px] h-[290px] relative">
+            <div class="rounded-[50%] absolute inset-0 bg-gradient-to-r from-[#8C45FF] to-[#542999] blur-3xl w-[312px] h-[234px] "></div>
+            <img src="./images/test.svg" alt="testimonial" class="relative z-10">
+        </div>
+        
+        <p class="text-[20px] text-center">”This product has completely transformed how I manage my projects and deadlines”</p>
+        <p class="text-sm text-center mt-2">Taila Taylor</p>
+        <p class="opacity-70 text-center text-sm">Digital Marketing Director @ Quantum</p>
+    </section>
+
+
+     <!--Clients desktop and tablet-->
+     <section class="hidden overflow-hidden md:flex flex-col items-center gap-3 text-white py-9 px-9">
+
+        <h1 class="text-2xl md:text-4xl lg:text-6xl">Our clients</h1>
+        <p class="text-base text-center opacity-45 md:px-44 md:opacity-80 lg:text-xl lg:mb-24">Hear firsthand how our solutions have boosted online success for users like you.</p>
+
+        <div class="flex flex-col md:flex-row">
+
+            <div class="w-[990x] h-[401px] relative mt-16">
+                <div class="rounded-[50%] absolute inset-0 bg-gradient-to-r from-[#8C45FF] to-[#542999] md:blur-3xl w-[512px] h-[334px] md:translate-x-36"></div>
+                <img src="./images/testimonialDesktop.svg" alt="testimonial" class="relative z-10  scale-150">
+            </div>
+    
+            <div class="flex absolute flex-col text-center md:text-left md:py-32 md:px-28 translate-x-56 lg:translate-x-96">
+            <p class="text-[20px] md:text-2xl md:absolute">”This product has completely transformed how I manage my projects and deadlines”</p>
+            <p class="text-sm mt-2 md:text-base md:mt-36">Taila Taylor</p>
+            <p class="opacity-70 text-sm md:text-base">Digital Marketing Director @ Quantum</p>
+            </div>
+
+
+        </div>
+
+
+        
+        
+    </section>
+
+    <!--Pricing-->
+    <section class="pricing flex flex-col py-8 px-7 items-center gap-8 text-white overflow-hidden">
+        <div class="text-center flex flex-col gap-2 items-center">
+            <h1 class="text-2xl md:text-5xl">Pricing</h1>
+            <p class="text-[15px] opacity-75 md:text-xl md:mt-7">Choose the right plan to meet your SEO <br> needs and start optimizing today.</p>
+        </div>
+        <div class="flex  items-center space-x-2">
+            <div class="toggle-switch" id="toggleSwitch">
+                <div class="toggle-circle"></div>
+            </div>
+            <p class="text-white opacity-40 text-base">Billed Yearly</p>
+
+        </div>
+            
+
+            <div class="flex flex-col gap-1 items-center md:flex-row md:gap-3 md:mt-8">
+
+                <div class="border-gray-800 border-[1px] w-[253px] h-[500px] relative rounded-lg p-6">
+                    <div class="flex flex-col items-start gap-2">
+                        <h1 class="text-2xl">Pricing</h1>
+                        <p class="opacity-45 text-sm">$29/mo</p>
+                        <hr class="border-[1px] bg-white opacity-25 w-full">
+                        <div class="flex flex-col mt-5 gap-4">
+                            <div class="flex space-x-2">
+                                <img src="./images/mark.svg" alt="checked-mark">
+                                <p class="text-sm opacity-75">Keyword optimization</p>
+                            </div>
+
+                            <div class="flex space-x-2">
+                                <img src="./images/mark.svg" alt="checked-mark">
+                                <p class="text-sm opacity-75">Automated meta tags</p>
+                            </div>
+
+                            <div class="flex space-x-2">
+                                <img src="./images/mark.svg" alt="checked-mark">
+                                <p class="text-sm opacity-75">SEO monitoring</p>
+                            </div>
+
+                            <div class="flex space-x-2">
+                                <img src="./images/mark.svg" alt="checked-mark">
+                                <p class="text-sm opacity-75">Monthly reports</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button class="shadow-inner-white mt-48 w-[100%] h-[38px] bottom-3 bg-pricing-gray rounded-md flex text-[13px] items-center justify-center">Join waitlist</button>
+                </div>
+
+
+                <div class="relative w-[253px] h-[500px]">
+                    <div class="rounded-[50%] opacity-35 absolute inset-0 bg-gradient-to-r from-[#8C45FF] to-[#542999] w-[312px] h-[900px] transform scale-y-125 -translate-y-60 md:rotate-90 blur-3xl"></div>
+                    <div class="border-gray-800 pro border-[1px] w-[253px] h-[500px] mt-5 relative rounded-lg p-6 md:mt-0">
+                        <div class="flex flex-col items-start gap-2">
+                            <h1 class="text-2xl">Pro</h1>
+                            <p class="opacity-45 text-sm">$79/mo</p>
+                            <hr class="border-[1px] bg-white opacity-25 w-full">
+                            <div class="flex flex-col mt-5 gap-4">
+                                <div class="flex space-x-2">
+                                    <img src="./images/mark.svg" alt="checked-mark">
+                                    <p class="text-sm opacity-75">Keyword optimization</p>
+                                </div>
+    
+                                <div class="flex space-x-2">
+                                    <img src="./images/mark.svg" alt="checked-mark">
+                                    <p class="text-sm opacity-75">Automated meta tags</p>
+                                </div>
+    
+                                <div class="flex space-x-2">
+                                    <img src="./images/mark.svg" alt="checked-mark">
+                                    <p class="text-sm opacity-75">SEO monitoring</p>
+                                </div>
+    
+                                <div class="flex space-x-2">
+                                    <img src="./images/mark.svg" alt="checked-mark">
+                                    <p class="text-sm opacity-75">Monthly reports</p>
+                                </div>
+    
+                                <div class="flex space-x-2">
+                                    <img src="./images/mark.svg" alt="checked-mark">
+                                    <p class="text-sm opacity-75">Content suggestions</p>
+                                </div>
+    
+                                <div class="flex space-x-2">
+                                    <img src="./images/mark.svg" alt="checked-mark">
+                                    <p class="text-sm opacity-75">Link optimization</p>
+                                </div>
+    
+                            </div>
+    
+                        </div>
+                        <button class="shadow-inner-white mt-32 w-[100%] h-[38px] bottom-3 bg-header-button rounded-md flex text-[13px] items-center justify-center">Join waitlist</button>
+                    </div>
+                </div>
+                
+
+
+                <div class="border-gray-800 border-[1px] w-[253px] h-[500px] relative mt-10 rounded-lg p-6 md:mt-0">
+                    <div class="flex flex-col items-start gap-2">
+                        <h1 class="text-2xl">Buisness</h1>
+                        <p class="opacity-45 text-sm">$149/mo</p>
+                        <hr class="border-[1px] bg-white opacity-25 w-full">
+                        <div class="flex flex-col mt-5 gap-4">
+                            <div class="flex space-x-2">
+                                <img src="./images/mark.svg" alt="checked-mark">
+                                <p class="text-sm opacity-75">Keyword optimization</p>
+                            </div>
+
+                            <div class="flex space-x-2">
+                                <img src="./images/mark.svg" alt="checked-mark">
+                                <p class="text-sm opacity-75">Automated meta tags</p>
+                            </div>
+
+                            <div class="flex space-x-2">
+                                <img src="./images/mark.svg" alt="checked-mark">
+                                <p class="text-sm opacity-75">SEO monitoring</p>
+                            </div>
+
+                            <div class="flex space-x-2">
+                                <img src="./images/mark.svg" alt="checked-mark">
+                                <p class="text-sm opacity-75">Monthly reports</p>
+                            </div>
+
+                            <div class="flex space-x-2">
+                                <img src="./images/mark.svg" alt="checked-mark">
+                                <p class="text-sm opacity-75">Content suggestions</p>
+                            </div>
+
+                            <div class="flex space-x-2">
+                                <img src="./images/mark.svg" alt="checked-mark">
+                                <p class="text-sm opacity-75">Link optimization</p>
+                            </div>
+
+                            <div class="flex space-x-2">
+                                <img src="./images/mark.svg" alt="checked-mark">
+                                <p class="text-sm opacity-75">Multi-user access</p>
+                            </div>
+
+                            <div class="flex space-x-2">
+                                <img src="./images/mark.svg" alt="checked-mark">
+                                <p class="text-sm opacity-75">API integration</p>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <button class="shadow-inner-white mt-14 w-[100%] h-[38px] bottom-3 bg-pricing-gray rounded-md flex text-[13px] items-center justify-center">Join waitlist</button>
+                </div>
+
+
+
+
+            </div>
+
+        
+        
+    </section>
+
+    <!--CTA-->
+    <section class="cta flex flex-col items-center gap-5 text-white p-2 border-gray-700 border-[1px] mx-9 mb-11 mt-4 pb-28">
+
+        <h1 class="text-3xl text-center mt-20 md:text-6xl">AI-driven SEO <br> for everyone.</h1>
+
+        <div class="flex flex-col gap-3 p-4 text-[14px] md:flex-row">
+            <input type="email" placeholder="Your email" class="p-3 border-gray-800 border-[1px] rounded-lg bg-transparent">
+            <button class="text-black font-bold bg-white flex justify-center items-center py-2 rounded-lg md:px-5">Join waitlist</button>
+        </div>
+
+        <div class="opacity-45 flex text-[14px]">
+            <p class="mr-2">No credit card required</p>.
+            <p class="ml-2">7-days free trial</p>
+
+        </div>
+    </section>
+
+    <!--Footer mobile-->
+    <section class="md:hidden px-[45px] py-[41px] text-white text-[13px]">
+        <div class="flex gap-6 items-center justify-between px-2">
+            <div class="flex gap-3 items-center">
+                <img src="./images/Logo.svg" alt="logo">
+                <h1 class="">AI Startup Kit</h1>
+            </div>
+            <div class="flex space-x-3">
+            <img src="./images/x.svg" alt="x" class="opacity-45">
+            <img src="./images/insta.svg" alt="instagram" class="opacity-45">
+            <img src="./images/youtube.svg" alt="youtube" class="opacity-45">
+            </div>
+            
+        </div>
+
+        <div class="flex justify-between mt-12 pr-24">
+            <div class="flex flex-col gap-7">
+                <p class="text-[13px]">Product</p>
+                <p class="opacity-45 text-[13px]">Features</p>
+                <p class="opacity-45 text-[13px]">Integration</p>
+                <p class="opacity-45 text-[13px]">Updates</p>
+                <p class="opacity-45 text-[13px]">FAQ</p>
+                <p class="opacity-45 text-[13px]">Pricing</p>
+            </div>
+
+            <div class="flex flex-col gap-7">
+                <p class="text-[13px]">Company</p>
+                <p class="opacity-45 text-[13px]">About</p>
+                <p class="opacity-45 text-[13px]">Blog</p>
+                <p class="opacity-45 text-[13px]">Careers</p>
+                <p class="opacity-45 text-[13px]">Manifesto</p>
+                <p class="opacity-45 text-[13px]">Press</p>
+                <p class="opacity-45 text-[13px]">Contract</p>
+            </div>
+
+        </div>
+
+        <div class="flex justify-between mt-20 pr-24">
+            <div class="flex flex-col gap-7">
+                <p class="text-[13px]">Resources</p>
+                <p class="opacity-45 text-[13px]">Examples</p>
+                <p class="opacity-45 text-[13px]">Community</p>
+                <p class="opacity-45 text-[13px]">Guides</p>
+                <p class="opacity-45 text-[13px]">Docs</p>
+                <p class="opacity-45 text-[13px]">Press</p>
+            </div>
+
+            <div class="flex flex-col gap-7">
+                <p class="text-[13px]">Legal</p>
+                <p class="opacity-45 text-[13px]">Privacy</p>
+                <p class="opacity-45 text-[13px]">Terms</p>
+                <p class="opacity-45 text-[13px]">Security</p>
+            
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--Footer desktop-->
+    <section class="hidden md:block text-white text-[15px] pb-12">
+        <div class="px-[45px] py-[41px] flex items-start justify-between">
+            <img src="./images/Logo.svg" alt="logo" class="mb-10">
+            <div class="flex gap-10 lg:gap-24">
+                <div class="flex flex-col gap-7">
+                    <p >Product</p>
+                    <p class="opacity-45">Features</p>
+                    <p class="opacity-45">Integration</p>
+                    <p class="opacity-45">Updates</p>
+                    <p class="opacity-45">FAQ</p>
+                    <p class="opacity-45">Pricing</p>
+                </div>
+        
+                <div class="flex flex-col gap-7">
+                    <p >Company</p>
+                    <p class="opacity-45">About</p>
+                    <p class="opacity-45">Blog</p>
+                    <p class="opacity-45">Careers</p>
+                    <p class="opacity-45">Manifesto</p>
+                    <p class="opacity-45">Press</p>
+                    <p class="opacity-45">Contact</p>
+                </div>
+        
+                <div class="flex flex-col gap-7">
+                    <p>Resources</p>
+                    <p class="opacity-45">Examples</p>
+                    <p class="opacity-45">Community</p>
+                    <p class="opacity-45">Guides</p>
+                    <p class="opacity-45">Docs</p>
+                </div>
+        
+                <div class="flex flex-col gap-7">
+                    <p>Legal</p>
+                    <p class="opacity-45">Privacy</p>
+                    <p class="opacity-45">Terms</p>
+                    <p class="opacity-45">Security</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="flex items-center gap-6 ml-14">
+            <img src="./images/x.svg" alt="x" class="opacity-45 cursor-pointer">
+            <img src="./images/insta.svg" alt="instagram" class="opacity-45 cursor-pointer">
+            <img src="./images/youtube.svg" alt="youtube" class="opacity-45 cursor-pointer">
+        </div>
+    
+    </section>
+    
+</body>
+<script src="index.js"></script>
+</html>
